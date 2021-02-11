@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
+    <title>Toys</title>
 </head>
 <body>
     <div>
-        AllToys
+        All Toys
     </div>
     <div>
         <table>
@@ -14,6 +14,15 @@
                 <td style="width: 100px"><a href="{% url "toys:toys"%}">Toys</a></td>
                 <td style="width: 100px"><a href="{% url "toys:users"%}">Users</a></td>
             </tr>
+        </table>
+        <hr>
+        <table>
+            {% for toy in toys %}
+                <tr>
+                <td>{{ forloop.counter}}</td>
+                <td>{{ toy.name}}</td>
+                </tr>
+            {% endfor %}
         </table>
     </div>
 </body>

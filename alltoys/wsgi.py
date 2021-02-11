@@ -1,5 +1,5 @@
 """
-WSGI config for alltoys123 project.
+WSGI config for alltoys project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
