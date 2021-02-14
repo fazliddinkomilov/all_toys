@@ -10,9 +10,9 @@ def rc():
         company.description = "Big and famous company"
         company.save()
         try:
-            transaction.atomic()
-            Employee.salary + (Employee.salary/100 * 10)
-            raise Exception('ERROR!')
+            with transaction.atomic():
+                Employee.salary + (Employee.salary / 100 * 10)
+                raise Exception('ERROR!')
         except Exception:
             pass
     print("done")

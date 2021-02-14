@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <title>Alltoys</title>
 </head>
 <body>
@@ -16,14 +16,16 @@
             </tr>
         </table>
         <hr>
-        <table>
-            {% for toy in toys %}
-                <tr>
-                <td>{{ forloop.counter}}</td>
-                <td>{{ toy.name}}</td>
-                </tr>
-            {% endfor %}
-        </table>
+       <div>
+           {{toys.name}}
+       </div>
+        <div>
+           {{toys.user.first_name}} {{toys.user.last_name}}
+        </div>
+        <div>
+           {{toys.description}}
+        </div>
+
     </div>
 </body>
 </html>

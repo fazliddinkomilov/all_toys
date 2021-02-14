@@ -2,12 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Alltoys</title>
+    <title>404</title>
 </head>
 <body>
-    <div>
-        TOYS
-    </div>
     <div>
         <table>
             <tr>
@@ -17,12 +14,7 @@
         </table>
         <hr>
         <table>
-            {% for toy in toys %}
-                <tr>
-                <td>{{ forloop.counter}}</td>
-                <td>{{ toy.name}}</td>
-                </tr>
-            {% endfor %}
+            {{error_text}}
         </table>
     </div>
 </body>
