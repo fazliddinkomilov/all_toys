@@ -20,7 +20,7 @@
             {% for toy in toys %}
                 <tr>
                 <td>{{ forloop.counter}}</td>
-                <td>{{ toy.name}}</td>
+               <td><a href="{% url 'toys:toy_detail' toy.id %}">{{ toy.name }}</a></td>
                 </tr>
             {% endfor %}
         </table>

@@ -11,12 +11,18 @@
     <div>
         <table>
             <tr>
-                <td style="width: 100px"><a href="{% url "markets:dashboard"%}">Back</a></td>
+                <td style="width: 100px"><a href="{% url 'markets:dashboard'%}">Back</a></td>
             </tr>
         </table>
         <hr>
         <table>
-            <td style="width: 100px"><a href="{% url "toys:dashboard"%}">AllToysOnline</a></td>
+             {% for mar in object_list %}
+                <tr>
+                <td>{{ forloop.counter}}</td>
+                <td> <a href="{% url 'markets:market_detail' mar.id %}">{{ mar.name }}</a></td>
+                </tr>
+            {% endfor %}
+
         </table>
     </div>
 </body>
